@@ -3,7 +3,6 @@ package test;
 import pages.StepsForTestPage;
 
 import org.junit.jupiter.api.Test;
-import static com.codeborne.selenide.Selenide.*;
 
 public class FillFormTest extends TestBase {
     StepsForTestPage stepsForTestPage = new StepsForTestPage();
