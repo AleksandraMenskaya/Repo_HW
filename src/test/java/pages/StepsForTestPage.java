@@ -3,13 +3,15 @@ package pages;
 import pages.components.CalendarComponent;
 
 import com.codeborne.selenide.SelenideElement;
-import static com.codeborne.selenide.Condition.text;
+import pages.components.TableWithResultComponent;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
-public class StepsForTest {
+public class StepsForTestPage {
+    TableWithResultComponent tableComponent = new TableWithResultComponent();
     private SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
@@ -22,73 +24,80 @@ public class StepsForTest {
             currentAddress = $("#currentAddress"),
             stateInput = $("#state"),
             cityInput = $("#city"),
-            buttonSendForm = $("#submit");
+            buttonSendForm = $("#submit"),
+            invalidDate = $("#userNumber:invalid");
 
-    public StepsForTest openPage() {
+    public StepsForTestPage openPage() {
         open("/automation-practice-form");
+        return this;
+    }
+    public StepsForTestPage removeBanners() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;
     }
-    public StepsForTest setFirstName(String value) {
+    public StepsForTestPage setFirstName(String value) {
         firstNameInput.setValue(value);
         return this;
     }
-    public StepsForTest setLastName(String value) {
+    public StepsForTestPage setLastName(String value) {
         lastNameInput.setValue(value);
         return this;
     }
-    public StepsForTest setUserEmail(String value) {
+    public StepsForTestPage setUserEmail(String value) {
         userEmailInput.setValue(value);
         return this;
     }
-    public StepsForTest setGenderWrapper(String value) {
+    public StepsForTestPage setGenderWrapper(String value) {
         genderWrapper.$(String.format("[value='%s']+label", value)).click();
         return this;
     }
-    public StepsForTest setUserNumber(String value) {
+    public StepsForTestPage setUserNumber(String value) {
         userNumberInput.setValue(value);
         return this;
     }
-    public StepsForTest setDateOfBirth(String day, String month, String year) {
+    public StepsForTestPage setDateOfBirth(String day, String month, String year) {
         calendarInput.click();
         CalendarComponent.setDate(day, month, year);
         return this;
     }
-    public StepsForTest selectSubjects(String value) {
+    public StepsForTestPage selectSubjects(String value) {
         subjectsInput.setValue(value);
         subjectsInput.pressEnter();
         return this;
     }
-    public StepsForTest selectHobbies(String value) {
+    public StepsForTestPage selectHobbies(String value) {
         hobbiesWrapper.$(byText(value)).click();
         return this;
     }
-    public StepsForTest uploadPicture(String value) {
+    public StepsForTestPage uploadPicture(String value) {
         uploadPictureControl.uploadFromClasspath(value);
         return this;
     }
-    public StepsForTest setCurrentAddress(String value) {
+    public StepsForTestPage setCurrentAddress(String value) {
         currentAddress.setValue(value);
         return this;
     }
-    public StepsForTest selectState(String value) {
+    public StepsForTestPage selectState(String value) {
         stateInput.click();
         stateInput.$(byText(value)).click();
         return this;
     }
-    public StepsForTest selectCity(String value) {
+    public StepsForTestPage selectCity(String value) {
         cityInput.click();
         cityInput.$(byText(value)).click();
         return this;
     }
-    public StepsForTest sendForm() {
+    public StepsForTestPage sendForm() {
         buttonSendForm.click();
         return this;
     }
-    public StepsForTest checkResult(String key, String value) {
-        $(".table-responsive").$(byText(key)).parent()
-                .shouldHave(text(value));
+    public StepsForTestPage checkResult(String key, String value) {
+        tableComponent.checkRow(key, value);
+        return this;
+    }
+    public StepsForTestPage checkResultNegative() {
+        invalidDate.exists();
         return this;
     }
 }

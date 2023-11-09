@@ -1,12 +1,13 @@
 package test;
 
-import pages.StepsForTest;
+import pages.StepsForTestPage;
 
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 
 public class FillFormTest extends TestBase {
-    StepsForTest stepsForTest = new StepsForTest();
+    StepsForTestPage stepsForTestPage = new StepsForTestPage();
+
     private String FIRST_NAME = "Aleksandra",
             LAST_NAME = "Menskaia",
             EMAIL = "almenskaya@gmail.com",
@@ -28,7 +29,8 @@ public class FillFormTest extends TestBase {
         // Заполнение формы, все поля
     void successfulFillFormTest() {
 
-        stepsForTest.openPage()
+        stepsForTestPage.openPage()
+            .removeBanners()
             .setFirstName(FIRST_NAME)
             .setLastName(LAST_NAME)
             .setUserEmail(EMAIL)
@@ -44,7 +46,7 @@ public class FillFormTest extends TestBase {
             .selectCity(CITY)
             .sendForm();
 
-        stepsForTest.checkResult("Student Name", FIRST_NAME + " " + LAST_NAME)
+        stepsForTestPage.checkResult("Student Name", FIRST_NAME + " " + LAST_NAME)
             .checkResult("Student Email", EMAIL)
             .checkResult("Gender", GENDER)
             .checkResult("Mobile", MOBILE)
@@ -60,28 +62,29 @@ public class FillFormTest extends TestBase {
         // Заполнение формы, обязательные поля
     void successfulMinimumDataFillFormTest() {
 
-        stepsForTest.openPage()
+        stepsForTestPage.openPage()
+            .removeBanners()
             .setFirstName(FIRST_NAME)
             .setLastName(LAST_NAME)
             .setGenderWrapper(GENDER)
             .setUserNumber(MOBILE)
             .sendForm();
 
-        stepsForTest.checkResult("Student Name", FIRST_NAME + " " + LAST_NAME)
+        stepsForTestPage.checkResult("Student Name", FIRST_NAME + " " + LAST_NAME)
             .checkResult("Gender", GENDER)
             .checkResult("Mobile", MOBILE);
     }
 
     @Test
-    // Заполнение формы, недостаточная длина номера телефона (негативный)
+    // Заполнение формы, валидация поля Mobile Number (негативный)
     void MobileMistakeFillFormTest() {
-        stepsForTest.openPage()
+        stepsForTestPage.openPage()
+                .removeBanners()
                 .setFirstName(FIRST_NAME)
                 .setLastName(LAST_NAME)
                 .setGenderWrapper(GENDER)
                 .setUserNumber(MOBILE_MISTAKE)
-                .sendForm();
-
-        $("#userNumber:invalid").exists();
+                .sendForm()
+                .checkResultNegative();
     }
 }
