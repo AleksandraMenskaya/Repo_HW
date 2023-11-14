@@ -5,6 +5,8 @@ import pages.components.CalendarComponent;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.TableWithResultComponent;
 
+import java.util.Date;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -12,6 +14,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class StepsForTestPage {
     TableWithResultComponent tableComponent = new TableWithResultComponent();
+    CalendarComponent calendarComponent = new CalendarComponent();
     private SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
@@ -56,9 +59,9 @@ public class StepsForTestPage {
         userNumberInput.setValue(value);
         return this;
     }
-    public StepsForTestPage setDateOfBirth(String day, String month, String year) {
+    public StepsForTestPage setDateOfBirth(Date date) {
         calendarInput.click();
-        CalendarComponent.setDate(day, month, year);
+        calendarComponent.setDate(date);
         return this;
     }
     public StepsForTestPage selectSubjects(String value) {
