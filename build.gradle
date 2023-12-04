@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.21.0",
+def allureVersion = "2.25.0",
     selenideVersion = "6.19.1"
 
 allure {
@@ -45,7 +45,7 @@ tasks.withType(Test) {
     }
 }
 
-task simple_test(type: Test) {
+task formFillTest(type: Test) {
     useJUnitPlatform {
         includeTags("formFillTest")
     }
