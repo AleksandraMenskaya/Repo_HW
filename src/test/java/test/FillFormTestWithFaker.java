@@ -1,12 +1,14 @@
 package test;
 
 import data.TestData;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.StepsForTestPage;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
+@Tag("formTest")
 public class FillFormTestWithFaker extends TestBase {
     StepsForTestPage stepsForTestPage = new StepsForTestPage();
     TestData data = new TestData();
