@@ -8,12 +8,13 @@ import pages.StepsForTestPage;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-@Tag("formTest")
+
 public class FillFormTestWithFaker extends TestBase {
     StepsForTestPage stepsForTestPage = new StepsForTestPage();
     TestData data = new TestData();
     private final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd MMMMM,yyyy", Locale.US);
     @Test
+    @Tag("formTest")
         // Заполнение формы, все поля
     void successfulFillFormTest() {
 
@@ -46,6 +47,7 @@ public class FillFormTestWithFaker extends TestBase {
     }
 
     @Test
+    @Tag("formTest")
         // Заполнение формы, обязательные поля
     void successfulMinimumDataFillFormTest() {
 
@@ -63,6 +65,7 @@ public class FillFormTestWithFaker extends TestBase {
     }
 
     @Test
+    @Tag("formTest")
     // Заполнение формы, валидация поля Mobile Number (негативный)
     void MobileMistakeFillFormTest() {
         stepsForTestPage.openPage()
