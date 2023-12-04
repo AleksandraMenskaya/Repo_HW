@@ -55,4 +55,4 @@ task simple_test(type: Test) {
 //    useJUnitPlatform {
 //        includeTags("demoqa")
 //    }
-}
+//}
