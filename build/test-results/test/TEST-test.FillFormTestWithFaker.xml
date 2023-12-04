@@ -1,55 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.FillFormTestWithFaker" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-12-04T14:11:46" hostname="DESKTOP-MOKE5LI" time="26.241">
+<testsuite name="test.FillFormTestWithFaker" tests="3" skipped="0" failures="2" errors="0" timestamp="2023-12-04T14:25:20" hostname="DESKTOP-MOKE5LI" time="74.973">
   <properties/>
-  <testcase name="MobileMistakeFillFormTest()" classname="test.FillFormTestWithFaker" time="11.994"/>
-  <testcase name="successfulFillFormTest()" classname="test.FillFormTestWithFaker" time="7.129"/>
-  <testcase name="successfulMinimumDataFillFormTest()" classname="test.FillFormTestWithFaker" time="4.524"/>
+  <testcase name="MobileMistakeFillFormTest()" classname="test.FillFormTestWithFaker" time="8.205"/>
+  <testcase name="successfulFillFormTest()" classname="test.FillFormTestWithFaker" time="32.605">
+    <failure message="org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.436&#10;  (Session info: chrome=119.0.6045.200)&#10;Build info: version: '4.13.0', revision: 'ba948ece5b*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [9d052457adcb5fae3010facc320e5e32, get {url=https://demoqa.com/automation-practice-form}]&#10;selenide.url: https://demoqa.com/automation-practice-form&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\0E3B~1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51880}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51880/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;selenide.baseUrl: https://demoqa.com&#10;Session ID: 9d052457adcb5fae3010facc320e5e32" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.436
+  (Session info: chrome=119.0.6045.200)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d052457adcb5fae3010facc320e5e32, get {url=https://demoqa.com/automation-practice-form}]
+selenide.url: https://demoqa.com/automation-practice-form
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\0E3B~1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51880}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51880/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+selenide.baseUrl: https://demoqa.com
+Session ID: 9d052457adcb5fae3010facc320e5e32
+	at java.base@14.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@14.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@14.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@14.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base@14.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at app//org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1092)
+	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:74)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104)
+	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:69)
+	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32)
+	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:102)
+	at app//com.codeborne.selenide.Selenide.open(Selenide.java:53)
+	at app//pages.StepsForTestPage.openPage(StepsForTestPage.java:34)
+	at app//test.FillFormTestWithFaker.successfulFillFormTest(FillFormTestWithFaker.java:21)
+	at java.base@14.0.2/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base@14.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@14.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <testcase name="successfulMinimumDataFillFormTest()" classname="test.FillFormTestWithFaker" time="31.885">
+    <failure message="org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 25.631&#10;  (Session info: chrome=119.0.6045.200)&#10;Build info: version: '4.13.0', revision: 'ba948ece5b*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [f69f0587345f0142635a3669574d9299, get {url=https://demoqa.com/automation-practice-form}]&#10;selenide.url: https://demoqa.com/automation-practice-form&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\0E3B~1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51995}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51995/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;selenide.baseUrl: https://demoqa.com&#10;Session ID: f69f0587345f0142635a3669574d9299" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 25.631
+  (Session info: chrome=119.0.6045.200)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f69f0587345f0142635a3669574d9299, get {url=https://demoqa.com/automation-practice-form}]
+selenide.url: https://demoqa.com/automation-practice-form
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\0E3B~1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51995}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51995/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+selenide.baseUrl: https://demoqa.com
+Session ID: f69f0587345f0142635a3669574d9299
+	at java.base@14.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@14.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base@14.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@14.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base@14.0.2/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at app//org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1092)
+	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:74)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104)
+	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:69)
+	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32)
+	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:102)
+	at app//com.codeborne.selenide.Selenide.open(Selenide.java:53)
+	at app//pages.StepsForTestPage.openPage(StepsForTestPage.java:34)
+	at app//test.FillFormTestWithFaker.successfulMinimumDataFillFormTest(FillFormTestWithFaker.java:54)
+	at java.base@14.0.2/java.lang.reflect.Method.invoke(Method.java:564)
+	at java.base@14.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@14.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699106305_11092_1
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699920477_19260_1
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
-дек. 04, 2023 3:11:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+дек. 04, 2023 3:25:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=119.0.6045.200 Platform=windows
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (5cdca4d7c08963ba9c438684441915f1)
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (5cdca4d7c08963ba9c438684441915f1),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699106305_11092_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (cafdc9b1f5d02376ef05400a2a242344)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (cafdc9b1f5d02376ef05400a2a242344),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699920477_19260_1] in 1 [size=1]
 [Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699106305_11092_1
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on windows (5cdca4d7c08963ba9c438684441915f1)...
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 729 ms
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (null),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699106305_11092_1] in 1 [size=0]
+[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - Browser will stay open due to holdBrowserOpen=true: 1 -> ChromeDriver: chrome on windows (cafdc9b1f5d02376ef05400a2a242344)
+[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Hold browser open: 1 -> ChromeDriver: chrome on windows (cafdc9b1f5d02376ef05400a2a242344)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (cafdc9b1f5d02376ef05400a2a242344),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699920477_19260_1] in 1 [size=0]
 [Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699119761_11092_1
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699929871_19260_1
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
-дек. 04, 2023 3:12:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+дек. 04, 2023 3:25:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=119.0.6045.200 Platform=windows
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (53cacbdf57cae1eea2ebf05921057c4b)
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (53cacbdf57cae1eea2ebf05921057c4b),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699119761_11092_1] in 1 [size=1]
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699119761_11092_1
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on windows (53cacbdf57cae1eea2ebf05921057c4b)...
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 671 ms
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (null),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699119761_11092_1] in 1 [size=0]
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (9d052457adcb5fae3010facc320e5e32)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (9d052457adcb5fae3010facc320e5e32),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699929871_19260_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - Browser will stay open due to holdBrowserOpen=true: 1 -> ChromeDriver: chrome on windows (9d052457adcb5fae3010facc320e5e32)
+[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Hold browser open: 1 -> ChromeDriver: chrome on windows (9d052457adcb5fae3010facc320e5e32)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (9d052457adcb5fae3010facc320e5e32),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699929871_19260_1] in 1 [size=0]
 [Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699127938_11092_1
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699963521_19260_1
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
-дек. 04, 2023 3:12:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+дек. 04, 2023 3:26:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=119.0.6045.200 Platform=windows
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (8df503d741372618f2ebf0be151a05ab)
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (8df503d741372618f2ebf0be151a05ab),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699127938_11092_1] in 1 [size=1]
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699127938_11092_1
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 1 -> ChromeDriver: chrome on windows (8df503d741372618f2ebf0be151a05ab)...
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 1 in 659 ms
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (null),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699127938_11092_1] in 1 [size=0]
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (f69f0587345f0142635a3669574d9299)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (f69f0587345f0142635a3669574d9299),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699963521_19260_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - Browser will stay open due to holdBrowserOpen=true: 1 -> ChromeDriver: chrome on windows (f69f0587345f0142635a3669574d9299)
+[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Hold browser open: 1 -> ChromeDriver: chrome on windows (f69f0587345f0142635a3669574d9299)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Unregister WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (f69f0587345f0142635a3669574d9299),proxy=null,downloadsFolder=C:\Users\Юлия\IdeaProjects\Repo_HW\build\downloads\1701699963521_19260_1] in 1 [size=0]
 ]]></system-err>
 </testsuite>

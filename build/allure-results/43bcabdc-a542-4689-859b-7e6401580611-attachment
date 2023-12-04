@@ -1,0 +1,7 @@
+[2023-12-04T14:21:07.775Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js 9:296479 "[GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead."
+[2023-12-04T14:21:07.789Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js 9:296479 "[GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead."
+[2023-12-04T14:21:07.824Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js 9:296479 "[GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead."
+[2023-12-04T14:21:07.841Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js 9:296479 "[GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead."
+[2023-12-04T14:21:07.843Z] [SEVERE] https://cdn-ima.33across.com/ob.js 0:10976 "33Across Lexicon ID Mappings Provider: PID not found"
+[2023-12-04T14:21:07.886Z] [SEVERE] https://cdn.ad.plus/player/adplus.js 413:84 Uncaught TypeError: c(...).setup is not a function
+[2023-12-04T14:21:08.084Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js 9:296479 "[GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead."
