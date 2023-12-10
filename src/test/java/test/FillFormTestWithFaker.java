@@ -14,7 +14,7 @@ public class FillFormTestWithFaker extends TestBase {
     TestData data = new TestData();
     private final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd MMMMM,yyyy", Locale.US);
     @Test
-    @Tag("formFillTest")
+    @Tag("formFill_Test")
         // Заполнение формы, все поля
     void successfulFillFormTest() {
 
@@ -47,7 +47,7 @@ public class FillFormTestWithFaker extends TestBase {
     }
 
     @Test
-    @Tag("formFillTest")
+    @Tag("formFill_Test")
         // Заполнение формы, обязательные поля
     void successfulMinimumDataFillFormTest() {
 
@@ -65,7 +65,7 @@ public class FillFormTestWithFaker extends TestBase {
     }
 
     @Test
-    @Tag("formFillTest")
+    @Tag("formFill_Test")
     // Заполнение формы, валидация поля Mobile Number (негативный)
     void MobileMistakeFillFormTest() {
         stepsForTestPage.openPage()

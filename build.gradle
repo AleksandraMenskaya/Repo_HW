@@ -45,8 +45,20 @@ tasks.withType(Test) {
     }
 }
 
-task formFillTest(type: Test) {
+task formFill_Test(type: Test) {
     useJUnitPlatform {
-        includeTags("formFillTest")
+        includeTags("formFill_Test")
+    }
+}
+
+task positive_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("positive")
+    }
+}
+
+task negative_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("negative")
     }
 }
