@@ -3,9 +3,9 @@
     "project": "AYM_Ptoject",
     "environment": "Test",
     "comment": "comment here @aymenskaya",
-    "reportLink": "https://jenkins.autotests.cloud/job/FillFormTestWithFaker",
+    "reportLink": "https://jenkins.autotests.cloud/job/FillFormTestWithFaker/34/",
     "language": "en",
-    "allureFolder": "allure-report",
+    "allureFolder": "build/allure",
     "enableChart": true
   },
   "telegram": {
