@@ -2,8 +2,7 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-//@Config.Sources({"classpath:config/${env}.properties"})
-@Config.Sources("classpath:${env}.properties")
+@Config.Sources({"classpath:config/${env}.properties"})
 public interface WebDriverConfig extends Config {
 
     @Key("baseUrl")

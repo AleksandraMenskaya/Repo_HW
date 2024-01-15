@@ -29,7 +29,7 @@ public class TestData {
 
         cities.put("NCR", new String[]{"Delhi", "Gurgaon", "Noida"});
         cities.put("Uttar Pradesh", new String[]{"Agra", "Lucknow", "Merrut"});
-        cities.put("Haryana", new String[]{"Agra", "Lucknow", "Merrut"});
+        cities.put("Haryana", new String[]{"Karnal", "Panipat"});
         cities.put("Rajasthan", new String[]{"Jaipur", "Jaiselmer"});
 
         return faker.options().option(cities.get(state));
